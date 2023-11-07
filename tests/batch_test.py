@@ -14,13 +14,13 @@ import concurrent.futures
 def run_thread(solver, user_choice_algorithm, initial_state, goal_state):
     try:
         solution, steps, cost_of_path, nodes_expanded, search_depth, running_time = solver.solve(user_choice_algorithm, initial_state, goal_state)
-        solutions[user_choice_algorithm][initial_state] = [solution, len(steps), nodes_expanded, search_depth, running_time]
+        solutions[user_choice_algorithm][initial_state] = [solution, cost_of_path, nodes_expanded, search_depth, running_time]
         if solution:
             print(f'Solution found for {initial_state}.')
         else:
             print(f'No solution found for {initial_state}.')
     except Exception as err:
-        print(f'Error occured while solving {initial_state}.')
+        print(f'Error occurred while solving {initial_state}.')
         print(err)
         quit()
 
@@ -32,12 +32,13 @@ if __name__ == '__main__':
     sample = random.sample(test_cases, sample_size)
     goal_state = '0123456780'
 
-    executor = concurrent.futures.ThreadPoolExecutor(max_workers=8)
-    for initial_state in sample:
+    executor = concurrent.futures.ThreadPoolExecutor(max_workers=5000)
+    for i, initial_state in enumerate(sample):
         executor.submit(run_thread, solver, '1', initial_state, goal_state)
         executor.submit(run_thread, solver, '2', initial_state, goal_state)
         executor.submit(run_thread, solver, '3', initial_state, goal_state)
         executor.submit(run_thread, solver, '4', initial_state, goal_state)
+        print(i)
     executor.shutdown(wait=True)
 
     with open('results.csv', 'w', newline='') as csvfile:

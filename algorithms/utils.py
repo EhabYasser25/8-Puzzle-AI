@@ -52,9 +52,9 @@ def move_right(state):
 
 def is_solvable(state):
     inversion_count = 0
-    for i in range(9):
+    for i in range(8):
         for j in range(i + 1, 9):
-            if state[i] != '0' and state[j] != '0' and state[i] > state[j]:
+            if state[j] != '0' and state[i] > state[j]:
                 inversion_count += 1
     return inversion_count % 2 == 0  # true when it is even
 

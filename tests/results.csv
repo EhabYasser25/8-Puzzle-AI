@@ -1,11 +1,1 @@
 Initial State,Solution,Steps,Nodes Expanded,Search Depth,Running Time,Solution,Steps,Nodes Expanded,Search Depth,Running Time,Solution,Steps,Nodes Expanded,Search Depth,Running Time,Solution,Steps,Nodes Expanded,Search Depth,Running Time
-2145067384,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0
-1025783461,True,34638,152830,67471,0.79159,True,16,6557,15,0.055,True,16,103,15,0.00196,True,16,130,15,0.0036
-0258763410,True,4775,4984,4774,0.1634,True,23,87521,22,1.52288,True,23,564,22,0.00761,True,23,1132,22,0.07235
-4318067254,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0
-6172508435,True,55422,64493,55421,0.91597,True,22,69121,21,1.36623,True,22,344,21,0.00517,True,22,873,21,0.06692
-0416872350,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0
-0468723510,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0
-0143578620,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0,False,0,0,0,0.0
-7453680126,True,60639,74507,60638,1.96116,True,25,135664,24,2.19985,True,25,2660,24,0.2443,True,25,5376,24,0.55409
-2836541708,True,64945,110376,67100,2.50722,True,25,116635,24,2.24228,True,25,1166,24,0.03681,True,25,3374,24,0.38738
